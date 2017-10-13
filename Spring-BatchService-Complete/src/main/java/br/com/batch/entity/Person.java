@@ -1,4 +1,4 @@
-package br.com.batch;
+package br.com.batch.entity;
 
 public class Person {
 	private String lastName;
@@ -31,6 +31,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "firstName: " + firstName + ", lastName: " + lastName;
+        return "firstName: " + this.firstName + ", lastName: " + this.lastName;
     }
 }

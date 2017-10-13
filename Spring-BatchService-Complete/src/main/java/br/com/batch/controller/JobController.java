@@ -1,4 +1,4 @@
-package br.com.batch;
+package br.com.batch.controller;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class JobController {
  
     @Autowired
-    JobLauncher jobLauncher;
+    private JobLauncher jobLauncher;
  
     @Autowired
-    Job processJob;
+    private Job processJob;
  
     @RequestMapping("/invokejob")
     public String handle() throws Exception {
