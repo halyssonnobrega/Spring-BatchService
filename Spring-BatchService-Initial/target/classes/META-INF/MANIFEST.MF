@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring-BatchService-Initial
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: halysson.h.nobrega
+Implementation-Vendor-Id: org.spring.batch
+Build-Jdk: 1.8.0_111
+Implementation-URL: http://projects.spring.io/spring-boot/Spring-Batch
+ Service-Initial/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
