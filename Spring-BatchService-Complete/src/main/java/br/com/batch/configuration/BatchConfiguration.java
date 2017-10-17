@@ -51,7 +51,7 @@ public class BatchConfiguration {
 	@Bean
 	public Step step1() {
 		return stepBuilderFactory.get("step1")
-				.<Person, Person>chunk(1)
+				.<Person, Person>chunk(10)
 				.reader(reader())
 				.processor(new PersonItemProcessor())
 				.writer(new PersonItemWriter())
