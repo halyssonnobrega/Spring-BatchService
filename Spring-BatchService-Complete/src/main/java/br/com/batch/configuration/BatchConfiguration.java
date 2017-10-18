@@ -59,7 +59,7 @@ public class BatchConfiguration {
 	}
 	
 	@Bean
-	ItemReader<Person> reader() {
+	public ItemReader<Person> reader() {
     	log.info("BATCH JOB READER");
 		FlatFileItemReader<Person> reader = new FlatFileItemReader<Person>();
 		reader.setResource(new ClassPathResource("sample-data.csv"));
