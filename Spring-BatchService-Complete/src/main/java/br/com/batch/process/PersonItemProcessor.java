@@ -9,16 +9,21 @@ import br.com.batch.entity.Person;
 public class PersonItemProcessor implements ItemProcessor<Person, Person> {
     private static final Logger log = LoggerFactory.getLogger(PersonItemProcessor.class);
 
-    @Override
+    private Person transformedPerson;
+    
+	@Override
     public Person process(final Person person) throws Exception {
     	log.info("BATCH JOB PROCESS");
 
         final String firstName = person.getFirstName().toUpperCase();
         final String lastName = person.getLastName().toUpperCase();
-
-        final Person transformedPerson = new Person(firstName, lastName);
-
-        log.info("Converting (" + person + ") into (" + transformedPerson + ")");
+        
+        if (firstName.equals("JUSTIN")) {
+        	transformedPerson = new Person(firstName, lastName);			
+        	log.info("Converting (" + person + ") into (" + transformedPerson + ")");        	
+		} else {
+			transformedPerson = null;
+		}
 
         return transformedPerson;
     }
